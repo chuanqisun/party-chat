@@ -1,16 +1,15 @@
 import { html, render } from "lit-html";
 import { repeat } from "lit-html/directives/repeat.js";
 import { BehaviorSubject, fromEvent, map, merge, tap, withLatestFrom } from "rxjs";
-import { fromResize } from "./from-resize";
 import { randomId } from "./id";
 import { observe } from "./observe-directive";
 import type { CanvasObject, Model } from "./types";
 
 export function createController(container: HTMLElement) {
   const pointerDown$ = fromEvent(container, "pointerdown");
-  const pointerMove$ = fromEvent(container, "pointermove");
-  const pointerUp$ = fromEvent(container, "pointerup");
-  const resize$ = fromResize(container);
+  // const pointerMove$ = fromEvent(container, "pointermove");
+  // const pointerUp$ = fromEvent(container, "pointerup");
+  // const resize$ = fromResize(container);
 
   const model$ = new BehaviorSubject<Model>({
     objects: [],

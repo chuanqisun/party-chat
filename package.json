@@ -4,10 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently npm:dev:*",
-    "dev:client": "vite",
-    "build:client": "tsc && vite build",
-    "dev:server": "echo 'No server to run'"
+    "dev": "vite",
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
