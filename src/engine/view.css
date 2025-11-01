@@ -1,0 +1,11 @@
+.object {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(calc(var(--x)), calc(var(--y)));
+  width: 12px;
+  height: 12px;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
